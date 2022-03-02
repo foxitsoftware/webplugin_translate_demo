@@ -54,9 +54,6 @@ module.exports = {
             return content.toString().replace(new RegExp('<%__THE_PLUGIN_URL__%>', 'g'), PLUGIN_URL);
           },
         },
-        {
-          from: path.resolve(__dirname, 'public'),
-        },
       ],
     }),
     new webpack.DefinePlugin({
