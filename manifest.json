@@ -1,0 +1,27 @@
+{
+    "author": "charlessoft",
+    "copyright": "foxit",
+    "description": "__MSG_desc__",
+    "icons": "",
+    "id": "TestExample",
+    "manifest_version": 1,
+    "name": "__MSG_name__",
+    "panel": {
+        "icon": "<%__THE_PLUGIN_URL__%>/assets/translate.svg",
+        "title": "Translate demo",
+        "tooltip": "Translate demo",
+        "url": "<%__THE_PLUGIN_URL__%>/panel.html"
+    },
+    "signcode": "",
+    "version": "1.0.0",
+    "resources": {
+        "en-US": {
+            "name": "Translate Tool",
+            "desc": "Translate Tool"
+        },
+        "zh-CN": {
+            "name": "翻译工具",
+            "desc": "翻译工具"
+        }
+    }
+}

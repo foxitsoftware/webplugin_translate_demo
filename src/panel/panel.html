@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://webpluginapi-azk8s.foxitcloud.com/foxit.umd.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdn.bootcdn.net/ajax/libs/crypto-js/4.0.0/crypto-js.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+  <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+
+  <style>
+      .title{
+        font-weight:bold;
+      }
+    </style>
+
+
+</head>
+<body style="text-align:center">
+
+<div id="app">
+  <div align="left" style="margin: 10px">
+    <span class="title">From Langue:</span><span  style="margin-left: 30px">auto</span>
+  </div>
+
+  <div align="left" style="margin: 10px">
+    <div class="dropdown">
+      <span class="title">Dest Langue: </span>
+      <select id="select" class="form-select" aria-label="Default select example" style="margin-left: 28px;">
+        <option value="zh">中文</option>
+        <option value="en">english</option>
+      </select>
+
+    </div>
+
+  </div>
+  <div align="left" style="margin: 10px">
+    <span class="title">Selected: </span> <span  style="margin-left: 40px" id="selectText"></span>
+  </div>
+  <div align="left" style="margin: 10px">
+    <span class="title">Translate:</span> <span style="margin-left: 40px" id="translateText"></span>
+  </div>
+<!--   <div align="center" style="margin: 10px">
+    <button type="button" class="btn btn-primary" aria-label="Left Align" onclick="goTranslate()">
+      translate
+    </button>
+  </div> -->
+
+
+</div>
+
+</script>
+
+<script>
+
+    var appKey = '23d0d760a2b06c5b'; // appID
+    var key = 'JwFeT7l6LL84rGoZZFdICvPEMIhr72Ar'; // 申请的密钥
+    var from = 'zh-CHS';
+    var to = 'en';
+
+    function goTranslate(){
+      var options=$("#select option:selected");
+      // alert(options.val()); //拿到选中项的值
+      var appid = '20220127001068871';
+      var key = 'vxkTvqE0EptOmHjFa5qz';
+      var salt = (new Date).getTime();
+      var query = document.getElementById('selectText').innerText;
+      // 多个query可以用\n连接  如 query='apple\norange\nbanana\npear'
+      var from = 'auto';
+      var to = options.val();
+      var str1 = appid + query + salt +key;
+      var sign = MD5(str1);
+      $.ajax({
+        url: 'https://api.fanyi.baidu.com/api/trans/vip/translate',
+        type: 'get',
+        dataType: 'jsonp',
+        data: {
+          q: query,
+          appid: appid,
+          salt: salt,
+          from: from,
+          to: to,
+          sign: sign
+        },
+        success: function (data) {
+          console.log(data)
+          if (data.error_msg == undefined && data.trans_result.length>0){
+            let transcontent = ''
+            for(let i =0;i<data.trans_result.length;i++){
+              transcontent +=  data.trans_result[i].dst
+            } 
+            document.getElementById('translateText').innerText = transcontent
+          }else{
+            document.getElementById('translateText').innerText = 'unknown'
+          }
+
+        }
+      });
+    }
+  function jsonp(option){
+    let script = document.createElement("script");
+    let param = "";
+    for (let item in option.param){
+      param += `&${item}=${option.param[item]}`;
+    }
+    //创建全局函数
+    let fName = "myJsonp" + Math.random().toString().replace(".")
+    window[fName] = option.success;
+    script.src = option.url + "?callback=" + fName + param;
+
+    // 追加到节点
+    document.body.appendChild(script);
+    // 加载完成后移除节点
+    script.onload = () =>{
+      document.body.removeChild(script);
+    }
+
+  }
+</script>
+<script src="md5.js"></script>
+
+</body>
+</body>
+</html>

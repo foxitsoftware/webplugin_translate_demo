@@ -1,0 +1,27 @@
+{
+    "author": "test",
+    "copyright": "test",
+    "description": "__MSG_desc__",
+    "icons": "",
+    "id": "TestExample",
+    "manifest_version": 1,
+    "name": "__MSG_name__",
+    "panel": {
+        "icon": "https://localhost:10004/assets/translate.svg",
+        "title": "Translate demo",
+        "tooltip": "Translate demo",
+        "url": "https://localhost:10004/panel.html"
+    },
+    "signcode": "",
+    "version": "1.0.0",
+    "resources": {
+        "en-US": {
+            "name": "Translate Tool",
+            "desc": "Translate Tool"
+        },
+        "zh-CN": {
+            "name": "翻译工具",
+            "desc": "翻译工具"
+        }
+    }
+}

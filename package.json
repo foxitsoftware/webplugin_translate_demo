@@ -1,0 +1,36 @@
+{
+  "name": "starter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development IS_SERVE=true webpack serve --mode=development",
+    "build:dev": "rimraf dist && cross-env NODE_ENV=development webpack --mode=development",
+    "build:prod": "rimraf dist && cross-env NODE_ENV=production webpack --mode=production",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.13.10",
+    "@babel/plugin-transform-runtime": "^7.13.10",
+    "@babel/preset-env": "^7.13.10",
+    "babel-loader": "^8.2.2",
+    "copy-webpack-plugin": "^8.0.0",
+    "cross-env": "^7.0.3",
+    "eslint": "^7.21.0",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-plugin-prettier": "^3.3.1",
+    "html-webpack-plugin": "^5.3.1",
+    "prettier": "^2.2.1",
+    "rimraf": "^3.0.2",
+    "webpack": "^5.24.4",
+    "webpack-cli": "^4.5.0",
+    "webpack-dev-server": "^3.11.2"
+  },
+  "dependencies": {
+    "@babel/runtime-corejs3": "^7.13.10",
+    "core-js": "^3.9.1",
+    "i18next": "^20.1.0"
+  }
+}
