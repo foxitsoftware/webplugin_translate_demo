@@ -8,6 +8,7 @@ You can choose to translate the contents of PDF documents in real time.
 
 
 
+
 ## Screenshot
 
 ![image-20220311145252543](./docs/Screenshot_1.png)
