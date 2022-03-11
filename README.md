@@ -1,9 +1,24 @@
-# webplugin_translate
+# translate
 
+## Project setup
+```
+npm install
+```
 
-## Introductions
+### Compiles and hot-reloads for development
+```
+npm run serve
+```
 
+### Compiles and minifies for production
+```
+npm run build
+```
 
-## Screenshot
+### Lints and fixes files
+```
+npm run lint
+```
 
-![image](./docs/Screenshot_1.png)
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).

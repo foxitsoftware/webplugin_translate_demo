@@ -1,16 +1,17 @@
 {
     "author": "charlessoft",
     "copyright": "foxit",
-    "description": "__MSG_desc__",
+    "description": "Simple translation tool",
     "icons": "",
     "id": "TestExample",
     "manifest_version": 1,
-    "name": "__MSG_name__",
+    "name": "Translation tool",
+    "command_url": "https://localhost:47777",
     "panel": {
-        "icon": "<%__THE_PLUGIN_URL__%>/assets/translate.svg",
-        "title": "Translate demo",
-        "tooltip": "Translate demo",
-        "url": "<%__THE_PLUGIN_URL__%>/panel.html"
+        "icon": "https://webpluginapi-stgus.connectedpdf.com/demo/webplugin_translate/translate.svg",
+        "title": "Translation demo",
+        "tooltip": "Translation demo",
+        "url": "https://localhost:47777"
     },
     "signcode": "",
     "version": "1.0.0",
