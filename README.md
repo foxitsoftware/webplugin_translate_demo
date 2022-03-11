@@ -1,6 +1,19 @@
-# translate
+# Webplugin Translation Tool
 
-## Project setup
+
+## Introductions
+The translation plug-in based on Editor Online and Web Plugin SDK.
+
+You can choose to translate the contents of PDF documents in real time.
+
+
+
+## Screenshot
+
+![image-20220311145252543](/private/tmp/webplugin_translate_demo/README.assets/image-20220311145252543.png)
+
+
+## Develop
 ```
 npm install
 ```
@@ -15,10 +28,5 @@ npm run serve
 npm run build
 ```
 
-### Lints and fixes files
-```
-npm run lint
-```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+
