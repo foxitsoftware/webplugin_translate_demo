@@ -27,7 +27,7 @@
 
     <Row type="flex" justify="center">
       <Col :span="23">
-        <Alert show-icon>Form</Alert>
+        <Alert >Form</Alert>
       </Col>
 
       <Col :span="23">
@@ -39,7 +39,7 @@
 
     <Row type="flex" justify="center" style="margin-top:10px">
       <Col :span="23">
-        <Alert show-icon>To</Alert>
+        <Alert >To</Alert>
       </Col>
       <Col :span="23">
         <Input :class="inputColor"  v-model="formItem.translateto" type="textarea" :autosize="{minRows: 2,maxRows: 100}" placeholder=""></Input>
@@ -122,20 +122,6 @@ export default {
       this.gotranslate()
     },
     async gotranslate() {
-      // alert("ss")
-      // alert()
-      // await window.Foxit.ReaderApp.alert('Hello plugin.');
-      // window.Foxit.ReaderApp.addAppListener('selectText', (text) => {
-      //   // vm.UpdateSelectText(text);
-      //   // document.getElementById('selectText').innerText = text;
-      //   // goTranslate();
-      //   alert("SSaa");
-      // });
-      //
-      // await window.Foxit.ReaderApp.alert('Hello plugin.1');
-      // console.log("====")
-      // console.log(this.formItem.selectlanguage)
-      // console.log("====")
       this.inputColor = ''
       this.loading = true
       var q = this.formItem.selecttext;
