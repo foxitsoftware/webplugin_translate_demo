@@ -7,12 +7,14 @@ The translation plug-in based on Editor Online and Web Plugin SDK.
 You can choose to translate the contents of PDF documents in real time.
 
 
+## How to install the translation tool
 
++ Click the `Help tab` to see the `Foxit plug-ins` button, click the button to install the translation tool.
+![](./docs/image-20220314095643680.png)
 
-## Screenshot
++ Click the translation button,it will display the plug-in panel.
 
-![image-20220311145252543](./docs/Screenshot_1.png)
-
+![](./docs/image-20220314095643791.png)
 
 ## Develop
 ```
@@ -28,6 +30,7 @@ npm run serve
 ```
 npm run build
 ```
+
 
 
 
