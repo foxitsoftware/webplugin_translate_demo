@@ -10,11 +10,11 @@ You can choose to translate the contents of PDF documents in real time.
 ## How to install the translation tool
 
 + Click the `Help tab` to see the `Foxit plug-ins` button, click the button to install the translation tool.
-![](./docs/image-20220314095643680.png)
+![image-png](./docs/image-20220314095643680.png)
 
 + Click the translation button,it will display the plug-in panel.
 
-![](./docs/image-20220314095643791.png)
+![image-png_1](./docs/image-20220314095643791.png)
 
 ## Develop
 ```
